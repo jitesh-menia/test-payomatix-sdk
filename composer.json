@@ -1,0 +1,17 @@
+{
+    "name": "jitesh-menia/payomatix-seamless",
+    "description": "Payomatix Seamless API Integration",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "JiteshMenia\\PayomatixSeamless\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jitesh Menia",
+            "email": "jitesh.menia@payomatix.com"
+        }
+    ],
+    "require": {}
+}
