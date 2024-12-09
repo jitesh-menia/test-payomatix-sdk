@@ -2,8 +2,8 @@
 
 namespace Payomatix\Service;
 
-use Payomatix\Service\ResponseService;
-use Payomatix\Config\PackageConfig;
+use Service\ResponseService;
+use Config\PackageConfig;
 
 class PaymentService extends PackageConfig
 {
