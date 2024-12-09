@@ -7,10 +7,10 @@ use Payomatix\Service\PaymentService;
 class Payomatix extends PaymentService
 {
 	/** @var array options to be used for requests. */
-	public static array $options;
+	public $options;
 
 	/** @var array fields to be used for requests. */
-	public static array $fields;
+	public $fields;
 
 	public function __construct()
 	{
@@ -19,26 +19,26 @@ class Payomatix extends PaymentService
 
 	public function getOptions()
 	{
-		return self::$options;
+		return $this->options;
 	}
 
 	public function setOptions($options)
 	{
-		self::$options = $options;
+		$this->options = $options;
 	}
 
 	public function getFields()
 	{
-		return self::$fields;
+		return $this->fields;
 	}
 
 	public function setFields($fields)
 	{
-		self::$fields = $fields;
+		$this->fields = $fields;
 	}
 
 	public function paymentAPI($fields)
 	{
-		return PaymentService::initializePayment(self::getFields(), self::getTestMode());
+		return PaymentService::initializePayment($this->getFields(), $this->getTestMode());
 	}
 }
