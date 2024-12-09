@@ -19,27 +19,27 @@ class Payomatix extends PaymentService
 
 	public function getOptions()
 	{
-		return $this->options;
+		return self::$options;
 	}
 
 	public function setOptions($options)
 	{
-		$this->options = $options;
+		self::$options = $options;
 	}
 
 	public function getFields()
 	{
-		return $this->fields;
+		return self::$fields;
 	}
 
 	public function setFields($fields)
 	{
-		$this->fields = $fields;
+		self::$fields = $fields;
 	}
 
 	public function paymentAPI($fields)
 	{
 		print_r($fields);exit();
-		return PaymentService::initializePayment($this->getFields(), $this->getTestMode());
+		return PaymentService::initializePayment(self::getFields(), self::getTestMode());
 	}
 }
