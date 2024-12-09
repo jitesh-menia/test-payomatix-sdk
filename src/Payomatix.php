@@ -12,6 +12,11 @@ class Payomatix extends PaymentService
 	/** @var array fields to be used for requests. */
 	public static array $fields;
 
+	public function __construct()
+	{
+		// 
+	}
+
 	public function getOptions()
 	{
 		return $this->options;

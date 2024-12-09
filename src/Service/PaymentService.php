@@ -26,6 +26,7 @@ class PaymentService extends PackageConfig
 			'Authorization: '. $this->secret_key,
 		];
 
+		print_r($validations);exit();
 		$validations = ValidationService::paymentAPIValidation($payload);
 
 		if (null !== $validations) {
