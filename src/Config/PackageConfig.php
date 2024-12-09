@@ -1,6 +1,6 @@
 <?php
 
-namespace Payomatix\Config;
+namespace Config;
 
 class PackageConfig
 {
