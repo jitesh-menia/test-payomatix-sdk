@@ -16,7 +16,7 @@ class ComposerStaticInitb7f1cc59634ce67f5587877842ef719f
     public static $prefixDirsPsr4 = array (
         'JiteshMenia\\PayomatixSeamless\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/seamless',
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
