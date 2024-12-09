@@ -5,7 +5,7 @@ namespace Service;
 use Payomatix\Service\ResponseService;
 use Payomatix\Config\PackageConfig;
 
-class PaymentService extends ResponseService
+class PaymentService extends PackageConfig
 {
 	use APIService;
 

@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'JiteshMenia\\PayomatixSeamless\\' => array($baseDir . '/src'),
+    'Payomatix\\' => array($baseDir . '/src'),
 );
