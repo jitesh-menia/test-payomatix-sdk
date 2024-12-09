@@ -22,11 +22,6 @@ class Fields
 
 	public $products;
 
-	public function __construct(array $fields)
-	{
-		return $this->getAllFieldsArray($fields);
-	}
-
 	public function __get($property)
 	{
 		if (property_exists($this, $property)) {
@@ -41,7 +36,7 @@ class Fields
 		}
 	}
 
-	public function getAllFieldsArray($fields)
+	public static function getAllFieldsArray($fields)
 	{
 		foreach ($fields as $name => $value) {
 			$this->__set($name, $value);

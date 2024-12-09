@@ -2,20 +2,18 @@
 
 namespace Payomatix\Service;
 
-use Payomatix\Helper\Fields;
+use Payomatix\Helper\Fields as FieldOptions;
 
-class ValidationService extends Fields
+class ValidationService extends FieldOptions
 {
-	public function __construct(array $fields)
-	{
-		return parent::__construct($fields);
-	}
-
 	public static function paymentAPIValidation(array $fields)
 	{
-		$validations = $this->paymentAPIFields();
+		$field_options = FieldOptions::getAllFieldsArray($fields);
 
-		return validateFields($validations, $fields);
+		$validations = $this->paymentAPIFields();
+		print_r(['field_options' => $field_options, 'validations' => $validations]);exit();
+
+		return validateFields($validations, $field_options);
 	}
 
 	public function paymentAPIFields()
