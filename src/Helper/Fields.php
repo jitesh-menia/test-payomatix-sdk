@@ -36,7 +36,7 @@ class Fields
 		}
 	}
 
-	public static function getAllFieldsArray($fields)
+	public function getAllFieldsArray($fields)
 	{
 		foreach ($fields as $name => $value) {
 			$this->__set($name, $value);

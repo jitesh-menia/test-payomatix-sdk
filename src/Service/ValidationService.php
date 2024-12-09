@@ -8,7 +8,8 @@ class ValidationService extends FieldOptions
 {
 	public static function paymentAPIValidation(array $fields)
 	{
-		$field_options = FieldOptions::getAllFieldsArray($fields);
+		$field_options = new FieldOptions;
+		$field_options->getAllFieldsArray($fields);
 
 		$validations = $this->paymentAPIFields();
 		print_r(['field_options' => $field_options, 'validations' => $validations]);exit();
