@@ -36,7 +36,7 @@ class PackageConfig
 		return self::BASE_URL . self::PAYMENT_TEST_URL;
 	}
 
-	protected function getLivePaymentUrl($test_mode)
+	protected function getLivePaymentUrl()
 	{
 		return self::BASE_URL . self::PAYMENT_URL;
 	}
