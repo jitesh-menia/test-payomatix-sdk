@@ -2,7 +2,6 @@
 
 namespace Payomatix\Service;
 
-use Payomatix\Service\ResponseService;
 use Payomatix\Config\PackageConfig;
 use Payomatix\Traits\APIService;
 
@@ -32,8 +31,8 @@ class PaymentService extends PackageConfig
 			'Authorization: '. $this->secret_key,
 		];
 
-		print_r($headers);exit();
 		$validations = ValidationService::paymentAPIValidation($payload);
+		print_r(['url' => $url, 'headers' => $headers, 'validations' => $validations]);exit();
 
 		if (null !== $validations) {
 			return ResponseService::validatioError();
