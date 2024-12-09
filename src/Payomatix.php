@@ -2,7 +2,7 @@
 
 namespace Payomatix;
 
-use Payomatix\Service\PaymentService;
+use JiteshMenia\PayomatixSeamless\Service\PaymentService;
 
 class Payomatix extends PaymentService
 {
