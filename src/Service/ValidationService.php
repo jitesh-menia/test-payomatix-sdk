@@ -11,13 +11,13 @@ class ValidationService extends FieldOptions
 		$field_options = new FieldOptions;
 		$field_options->getAllFieldsArray($fields);
 
-		$validations = $this->paymentAPIFields();
+		$validations = self::paymentAPIFields();
 		print_r(['field_options' => $field_options, 'validations' => $validations]);exit();
 
-		return validateFields($validations, $field_options);
+		return self::validateFields($validations, $field_options);
 	}
 
-	public function paymentAPIFields()
+	public static function paymentAPIFields()
 	{
 		return [
 			'email' => 'required',
@@ -58,7 +58,7 @@ class ValidationService extends FieldOptions
 		];
 	}
 
-	public function validateFields($validations, $fields)
+	public static function validateFields($validations, $fields)
 	{
 		if (empty($validations)) {
 			return null;
