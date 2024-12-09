@@ -1,6 +1,6 @@
 <?php
 
-namespace Payomatix\Service;
+namespace Service;
 
 class ResponseService
 {
