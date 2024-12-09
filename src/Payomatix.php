@@ -39,6 +39,6 @@ class Payomatix extends PaymentService
 
 	public function paymentAPI($fields)
 	{
-		return PaymentService::initializePayment($this->getFields(), $this->getTestMode());
+		return PaymentService::initializePayment($this->getFields(), $this->getOptions());
 	}
 }
