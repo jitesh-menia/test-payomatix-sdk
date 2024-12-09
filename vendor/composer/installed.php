@@ -3,7 +3,7 @@
         'name' => 'jitesh-menia/payomatix-seamless',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'b617a4d89885f38689ba0004f7705a2387cb1f43',
+        'reference' => 'b11ed356035d7966a5508cab15a684eb4074e124',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'jitesh-menia/payomatix-seamless' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'b617a4d89885f38689ba0004f7705a2387cb1f43',
+            'reference' => 'b11ed356035d7966a5508cab15a684eb4074e124',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
