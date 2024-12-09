@@ -14,6 +14,7 @@ class PaymentService
 
 	protected function initializePayment($payload, $options)
 	{
+		print_r($payload);exit();
 		$url = $payload['is_test'] == true ? PackageConfig::getLivePaymentUrl() : PackageConfig::getTestPaymentUrl(); 
 		$this->secret_key = $this->getSecretKey();
 
