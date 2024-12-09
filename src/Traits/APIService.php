@@ -1,6 +1,6 @@
 <?php
 
-namespace Traits;
+namespace Payomatix\Traits;
 
 trait APIService
 {

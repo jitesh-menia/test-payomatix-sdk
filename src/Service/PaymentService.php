@@ -1,6 +1,6 @@
 <?php
 
-namespace Service;
+namespace Payomatix\Service;
 
 use Payomatix\Service\ResponseService;
 use Payomatix\Config\PackageConfig;
