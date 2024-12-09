@@ -2,7 +2,7 @@
 
 namespace Payomatix;
 
-use Payomatix\Service\Service\PaymentService;
+use Service\PaymentService;
 
 class Payomatix extends PaymentService
 {
