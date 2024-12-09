@@ -27,7 +27,7 @@ class PaymentService
 			'Authorization: '. $this->secret_key,
 		];
 
-		print_r([$url, $headers, $validations]);exit();
+		print_r($headers);exit();
 		$validations = ValidationService::paymentAPIValidation($payload);
 
 		if (null !== $validations) {
