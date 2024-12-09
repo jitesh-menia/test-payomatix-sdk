@@ -1,5 +1,6 @@
 {
     "name": "jitesh-menia/payomatix-seamless",
+    "version": "1.0.0",
     "description": "Payomatix Seamless API Integration",
     "type": "library",
     "autoload": {
