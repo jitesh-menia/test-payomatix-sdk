@@ -9,11 +9,31 @@ class ComposerStaticInitb7f1cc59634ce67f5587877842ef719f
     public static $prefixLengthsPsr4 = array (
         'P' => 
         array (
+            'Payomatix\\Traits\\' => 17,
+            'Payomatix\\Service\\' => 18,
+            'Payomatix\\Helper\\' => 17,
+            'Payomatix\\Config\\' => 17,
             'Payomatix\\' => 10,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Payomatix\\Traits\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Traits',
+        ),
+        'Payomatix\\Service\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Service',
+        ),
+        'Payomatix\\Helper\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Helper',
+        ),
+        'Payomatix\\Config\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Config',
+        ),
         'Payomatix\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
