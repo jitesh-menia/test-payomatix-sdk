@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInita8e5978c185bdb47b17e90f2187f0ddf
+class ComposerStaticInitb7f1cc59634ce67f5587877842ef719f
 {
     public static $prefixLengthsPsr4 = array (
         'J' => 
@@ -16,7 +16,7 @@ class ComposerStaticInita8e5978c185bdb47b17e90f2187f0ddf
     public static $prefixDirsPsr4 = array (
         'JiteshMenia\\PayomatixSeamless\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/../..' . '/src/seamless',
         ),
     );
 
@@ -27,9 +27,9 @@ class ComposerStaticInita8e5978c185bdb47b17e90f2187f0ddf
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInita8e5978c185bdb47b17e90f2187f0ddf::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInita8e5978c185bdb47b17e90f2187f0ddf::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInita8e5978c185bdb47b17e90f2187f0ddf::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitb7f1cc59634ce67f5587877842ef719f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitb7f1cc59634ce67f5587877842ef719f::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitb7f1cc59634ce67f5587877842ef719f::$classMap;
 
         }, null, ClassLoader::class);
     }
