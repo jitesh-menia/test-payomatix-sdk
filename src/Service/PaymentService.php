@@ -6,7 +6,7 @@ use Payomatix\Service\ResponseService;
 use Payomatix\Config\PackageConfig;
 use Payomatix\Traits\APIService;
 
-class PaymentService
+class PaymentService extends PackageConfig
 {
 	use APIService;
 
@@ -14,7 +14,12 @@ class PaymentService
 
 	protected function initializePayment($payload, $options)
 	{
-		$url = $payload['is_test'] == true ? PackageConfig::getLivePaymentUrl() : PackageConfig::getTestPaymentUrl(); 
+		if (isset($payload['is_test']) && $payload['is_test'] == true) {
+			$url = PackageConfig::getTestPaymentUrl(); 
+		} else {
+			$url = PackageConfig::getLivePaymentUrl(); 
+		}
+
 		$this->secret_key = $this->getSecretKey();
 
 		if (null == $this->secret_key) {
