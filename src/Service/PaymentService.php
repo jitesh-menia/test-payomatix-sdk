@@ -2,9 +2,9 @@
 
 namespace Payomatix\Service;
 
-use Payomatix\Service\ResponseService;
-use Payomatix\Config\PackageConfig;
-use Payomatix\Traits\APIService;
+use Service\ResponseService;
+use Config\PackageConfig;
+use Traits\APIService;
 
 class PaymentService
 {
