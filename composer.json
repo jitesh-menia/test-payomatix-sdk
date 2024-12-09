@@ -4,7 +4,11 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Payomatix\\": "src"
+            "Payomatix\\": "src",
+            "Payomatix\\Config": "src/Config",
+            "Payomatix\\Service": "src/Service",
+            "Payomatix\\Helper": "src/Helper",
+            "Payomatix\\Traits": "src/Traits"
         }
     },
     "authors": [
