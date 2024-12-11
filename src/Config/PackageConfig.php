@@ -15,18 +15,7 @@ class PackageConfig
 
 	protected function getSecretKey()
 	{
-		if(class_exists('Dotenv')) {
-			print_r('if');exit();
-		    $dotenv = Dotenv::createImmutable($env_path);
-		} else {
-			print_r('else');exit();
-		    $dotenv = Dotenv::createImmutable(__DIR__."/../../../");
-		}
-
-		print_r('here');exit();
-
-
-		$env_path = __DIR__ . '/../../.env';
+		$env_path = __DIR__ . '/../../../../../';
 
 		if(file_exists($env_path)) {
 		    $dotenv = Dotenv::createImmutable($env_path);
@@ -35,9 +24,8 @@ class PackageConfig
 		}
 
 		$dotenv->load();
-		print_r($_ENV);exit();
 
-		return getenv('PAYOMATIX_SECRET_KEY');
+		return $_SERVER['PAYOMATIX_SECRET_KEY'];
 	}
 
 	protected function getVersion()
