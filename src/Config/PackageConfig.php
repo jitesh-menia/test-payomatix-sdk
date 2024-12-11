@@ -2,6 +2,8 @@
 
 namespace Payomatix\Config;
 
+use Dotenv\Dotenv;
+
 class PackageConfig
 {
 	public const VERSION = '1.0.0';
@@ -13,6 +15,28 @@ class PackageConfig
 
 	protected function getSecretKey()
 	{
+		if(class_exists('Dotenv')) {
+			print_r('if');exit();
+		    $dotenv = Dotenv::createImmutable($env_path);
+		} else {
+			print_r('else');exit();
+		    $dotenv = Dotenv::createImmutable(__DIR__."/../../../");
+		}
+
+		print_r('here');exit();
+
+
+		$env_path = __DIR__ . '/../../.env';
+
+		if(file_exists($env_path)) {
+		    $dotenv = Dotenv::createImmutable($env_path);
+		} else {
+		    $dotenv = Dotenv::createImmutable(__DIR__."/../../../");
+		}
+
+		$dotenv->load();
+		print_r($_ENV);exit();
+
 		return getenv('PAYOMATIX_SECRET_KEY');
 	}
 

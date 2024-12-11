@@ -12,6 +12,14 @@ class ResponseService
 		];
 	}
 
+	public static function serverError()
+	{
+		return [
+			'status' => false,
+			'errors' => 'server error',
+		];
+	}
+
 	public static function validationError($validations)
 	{
 		return [
@@ -23,8 +31,8 @@ class ResponseService
 	public static function standardThreeDS($response)
 	{
 		return [
-			'status' => false,
-			'url' => $response['url'] ?? null,
+			'status' => true,
+			'redirect_url' => $response['redirect_url'],
 		];
 	}
 }

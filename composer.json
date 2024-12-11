@@ -1,15 +1,11 @@
 {
     "name": "mypackage/lpayment",
     "version": "1.0.0",
-    "description": "Payomatix Seamless API Integration",
+    "description": "Payomatix API",
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Payomatix\\": "src",
-            "Payomatix\\Config\\": "src/Config",
-            "Payomatix\\Service\\": "src/Service",
-            "Payomatix\\Helper\\": "src/Helper",
-            "Payomatix\\Traits\\": "src/Traits"
+            "Payomatix\\": "src"
         }
     },
     "authors": [
@@ -18,5 +14,7 @@
             "email": "jitesh.menia@payomatix.com"
         }
     ],
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
 }

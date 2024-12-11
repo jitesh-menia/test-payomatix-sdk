@@ -37,7 +37,15 @@ class PaymentService extends PackageConfig
 			return ResponseService::validationError($validations);
 		}
 
-		$data = $this->curlPostRequest($url, $headers, json_encode($payload), $options);
-		dd($data);
+		try {
+			$response = json_decode($this->curlPostRequest($url, $headers, json_encode($payload), $options), true);
+			if (isset($response['redirect_url']) && !empty($response['redirect_url'])) {
+				return ResponseService::standardThreeDS($response);
+			} else {
+				return ResponseService::serverError();
+			}
+		} catch (\Exception $e) {
+			return ResponseService::serverError();
+		}
 	}
 }
