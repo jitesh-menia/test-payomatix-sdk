@@ -3,6 +3,7 @@
 namespace Payomatix;
 
 use Payomatix\Service\PaymentService;
+use Payomatix\Service\ResponseService;
 
 class Payomatix extends PaymentService
 {
@@ -19,8 +20,8 @@ class Payomatix extends PaymentService
 		$this->options = $options;
 	}
 
-	public function paymentAPI($fields)
+	public function nonSeamlessPayment($fields): array
 	{
-		return PaymentService::initializePayment($fields, $this->getOptions());
+		return (array) PaymentService::initializePayment($fields, $this->getOptions());
 	}
 }

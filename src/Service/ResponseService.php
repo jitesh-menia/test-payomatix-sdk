@@ -6,17 +6,25 @@ class ResponseService
 {
 	public static function noSecKey()
 	{
-		return response([
-			'status' => 404,
-			'error' => 'no secret key',
-		]);
+		return [
+			'status' => false,
+			'errors' => 'no secret key',
+		];
 	}
 
-	public static function validatioError($payload)
+	public static function validationError($validations)
 	{
-		return response([
-			'status' => 404,
-			'error' => 'no secret key',
-		]);
+		return [
+			'status' => false,
+			'errors' => $validations,
+		];
+	}
+
+	public static function standardThreeDS($response)
+	{
+		return [
+			'status' => false,
+			'url' => $response['url'] ?? null,
+		];
 	}
 }

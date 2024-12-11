@@ -1,5 +1,5 @@
 {
-    "name": "jitesh-menia/payomatix-seamless",
+    "name": "mypackage/lpayment",
     "version": "1.0.0",
     "description": "Payomatix Seamless API Integration",
     "type": "library",

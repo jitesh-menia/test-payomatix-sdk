@@ -11,7 +11,7 @@ class PaymentService extends PackageConfig
 
 	protected $secret_key;
 
-	protected function initializePayment($payload, $options)
+	protected function initializePayment($payload, $options): array
 	{
 		if (isset($payload['is_test']) && $payload['is_test'] == true) {
 			$url = PackageConfig::getTestPaymentUrl(); 
@@ -32,12 +32,12 @@ class PaymentService extends PackageConfig
 		];
 
 		$validations = ValidationService::paymentAPIValidation($payload);
-		print_r(['url' => $url, 'headers' => $headers, 'validations' => $validations]);exit();
 
-		if (null !== $validations) {
-			return ResponseService::validatioError();
+		if (!empty($validations)) {
+			return ResponseService::validationError($validations);
 		}
 
-		return $this->curlRequest($url, $method, $headers, $payload, $options);
+		$data = $this->curlPostRequest($url, $headers, json_encode($payload), $options);
+		dd($data);
 	}
 }
