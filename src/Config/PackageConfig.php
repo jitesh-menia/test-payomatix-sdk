@@ -17,13 +17,10 @@ class PackageConfig
 	{
 		$env_path = __DIR__ . '/../../../../../';
 
-		if(file_exists($env_path)) {
+		if(file_exists($env_path.'.env')) {
 		    $dotenv = Dotenv::createImmutable($env_path);
-		} else {
-		    $dotenv = Dotenv::createImmutable(__DIR__."/../../../");
+			$dotenv->load();
 		}
-
-		$dotenv->load();
 
 		return $_SERVER['PAYOMATIX_SECRET_KEY'];
 	}
